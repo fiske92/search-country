@@ -1,72 +1,36 @@
 .loader {
-    transform: rotateZ(45deg);
-    perspective: 1000px;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    color: #fff;
-  }
-    .loader:before,
-    .loader:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: inherit;
-      height: inherit;
-      border-radius: 50%;
-      transform: rotateX(70deg);
-      animation: 1s spin linear infinite;
-    }
-    .loader:after {
-      color: #FF3D00;
-      transform: rotateY(70deg);
-      animation-delay: .4s;
-    }
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  background-image: radial-gradient(circle 25px at 25px 25px, rgb(188, 188, 188) 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, rgb(188, 188, 188) 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, rgb(188, 188, 188) 100%, transparent 0), linear-gradient(rgb(188, 188, 188) 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-color: #0b76a4 transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-  @keyframes rotate {
-    0% {
-      transform: translate(-50%, -50%) rotateZ(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotateZ(360deg);
-    }
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-
-  @keyframes rotateccw {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(-360deg);
-    }
+  100% {
+    transform: rotate(360deg);
   }
-
-  @keyframes spin {
-    0%,
-    100% {
-      box-shadow: .2em 0px 0 0px currentcolor;
-    }
-    12% {
-      box-shadow: .2em .2em 0 0 currentcolor;
-    }
-    25% {
-      box-shadow: 0 .2em 0 0px currentcolor;
-    }
-    37% {
-      box-shadow: -.2em .2em 0 0 currentcolor;
-    }
-    50% {
-      box-shadow: -.2em 0 0 0 currentcolor;
-    }
-    62% {
-      box-shadow: -.2em -.2em 0 0 currentcolor;
-    }
-    75% {
-      box-shadow: 0px -.2em 0 0 currentcolor;
-    }
-    87% {
-      box-shadow: .2em -.2em 0 0 currentcolor;
-    }
-  }
+} 

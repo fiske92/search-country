@@ -9,7 +9,7 @@ export default function Header({darkMode, setDarkMode}) {
     return <Container>
         <header className="flex justify-between items-center dark:text-white">
             <h1 className="font-bold text-md md:text-xl">Where in the world?</h1>
-            <div className="flex items-center cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
+            <div className="flex items-center cursor-pointer select-none" onClick={() => setDarkMode(!darkMode)}>
                 {themeModeIcon}
                 <span className="ml-2 text-sm font-semibold">{themeModeText}</span>
             </div>

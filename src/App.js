@@ -7,7 +7,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return <div className={darkMode ? 'dark' : ''}>
-    <div className='bg-white dark:bg-gray-700'>
+    <div className='bg-white dark:bg-gray-700 min-h-[100vh]'>
       <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Body />
     </div>
