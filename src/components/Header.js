@@ -2,7 +2,8 @@ import { IoMoonOutline } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
 import Container from "./UI/Container";
 
-export default function Header({darkMode, setDarkMode}) {
+export default function Header({ darkModeProp }) {
+    const {darkMode, setDarkMode} = darkModeProp;
     const themeModeText = darkMode ? 'Light Mode' : 'Dark Mode';
     const themeModeIcon = darkMode ? <IoSunnyOutline /> : <IoMoonOutline />
 

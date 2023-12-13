@@ -1,4 +1,4 @@
-export default function SingleCountry({data}) {
+export default function SingleCountry({ data }) {
     return <div className="dark:border rounded overflow-hidden">
         <img className="max-h-[150px] md:max-h-[85px] w-full object-cover" src={data.flags?.png} alt={data.flags?.alt}/>
         <div className="p-4">
