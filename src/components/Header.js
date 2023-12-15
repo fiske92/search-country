@@ -4,6 +4,7 @@ import Container from "./UI/Container";
 
 export default function Header({ darkModeProp }) {
     const {darkMode, setDarkMode} = darkModeProp;
+
     const themeModeText = darkMode ? 'Light Mode' : 'Dark Mode';
     const themeModeIcon = darkMode ? <IoSunnyOutline /> : <IoMoonOutline />
 

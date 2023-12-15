@@ -1,11 +1,13 @@
 export default function SingleCountry({ data }) {
-    return <div className="dark:border rounded overflow-hidden">
-        <img className="max-h-[150px] md:max-h-[85px] w-full object-cover" src={data.flags?.png} alt={data.flags?.alt}/>
+    const {name, population, region, capital, flags} = data;
+
+    return <div className="dark:border rounded overflow-hidden shadow-lg">
+        <img className="h-[180px] md:h-[150px] w-full object-cover" src={flags?.png} alt={flags?.alt}/>
         <div className="p-4">
-            <h3 className="font-bold mb-3">{data.name?.common}</h3>
-            <p>Population: <span className="text-gray-500 dark:text-white">{data.population}</span></p>
-            <p>Region: <span className="text-gray-500 dark:text-white">{data.region}</span></p>
-            <p>Capital: <span className="text-gray-500 dark:text-white">{data.capital}</span></p>
+            <h3 className="font-bold mb-3">{name?.common}</h3>
+            <p>Population: <span className="text-gray-500 dark:text-white">{population}</span></p>
+            <p>Region: <span className="text-gray-500 dark:text-white">{region}</span></p>
+            <p>Capital: <span className="text-gray-500 dark:text-white">{capital}</span></p>
         </div>
     </div>
 }
